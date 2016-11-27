@@ -2,7 +2,6 @@
 
 kafka producer and consumer example in scala and java
 
-you can test with local server.
 
 ### start zookeeper
 if you have installed zookeeper, start it, or
