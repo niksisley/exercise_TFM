@@ -29,7 +29,7 @@ import com.twitter.hbc.httpclient.auth.OAuth1;
             Properties properties = new Properties();
             properties.put("metadata.broker.list", "localhost:9092");
             properties.put("serializer.class", "kafka.serializer.StringEncoder");
-            properties.put("client.id","camus");
+            properties.put("client.id","nico");
             ProducerConfig producerConfig = new ProducerConfig(properties);
             kafka.javaapi.producer.Producer<String, String> producer = new kafka.javaapi.producer.Producer<String, String>(
                     producerConfig);
@@ -39,7 +39,7 @@ import com.twitter.hbc.httpclient.auth.OAuth1;
             endpoint.trackTerms(Lists.newArrayList("twitterapi",
                     "#AAPSweep"));
 
-            String consumerKey=    TwitterSourceConstant.CONSUMER_KEY_KEY;
+            String consumerKey=TwitterSourceConstant.CONSUMER_KEY_KEY;
             String consumerSecret=TwitterSourceConstant.CONSUMER_SECRET_KEY;
             String accessToken=TwitterSourceConstant.ACCESS_TOKEN_KEY;
             String accessTokenSecret=TwitterSourceConstant.ACCESS_TOKEN_SECRET_KEY;

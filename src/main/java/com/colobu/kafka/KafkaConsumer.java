@@ -16,12 +16,12 @@ import kafka.javaapi.consumer.ConsumerConnector;
 
     public class KafkaConsumer {
         private ConsumerConnector consumerConnector = null;
-        private final String topic = "twitter-topic1";
+        private final String topic = "hadoop";
 
         public void initialize() {
             Properties props = new Properties();
             props.put("zookeeper.connect", "localhost:2181");
-            props.put("group.id", "testgroup");
+            props.put("group.id", "nico");
             props.put("zookeeper.session.timeout.ms", "400");
             props.put("zookeeper.sync.time.ms", "300");
             props.put("auto.commit.interval.ms", "100");
