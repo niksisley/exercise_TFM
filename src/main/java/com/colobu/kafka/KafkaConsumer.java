@@ -38,7 +38,7 @@ import kafka.javaapi.consumer.ConsumerConnector;
             Map<String, List<KafkaStream<byte[], byte[]>>> consumerStreams =
                     consumerConnector.createMessageStreams(topicCount);
 
-            // Get Kafka stream for topic 'mytopic'
+            // Get Kafka stream for topic 'hadoop'
             List<KafkaStream<byte[], byte[]>> kStreamList =
                     consumerStreams.get(topic);
             // Iterate stream using ConsumerIterator
