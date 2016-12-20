@@ -1,14 +1,12 @@
 package com.colobu.kafka;
 
-/**
- * Created by nico on 26/11/16.
- */
 import java.util.*;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
+
 
 import com.google.common.collect.Lists;
 import com.twitter.hbc.ClientBuilder;
@@ -26,6 +24,7 @@ import com.twitter.hbc.httpclient.auth.OAuth1;
 
         public static void run() throws InterruptedException {
 
+
             Properties properties = new Properties();
             properties.put("metadata.broker.list", "localhost:9092");
             properties.put("serializer.class", "kafka.serializer.StringEncoder");
@@ -37,7 +36,7 @@ import com.twitter.hbc.httpclient.auth.OAuth1;
             BlockingQueue<String> queue = new LinkedBlockingQueue<String>(100000);
             StatusesFilterEndpoint endpoint = new StatusesFilterEndpoint();
             endpoint.trackTerms(Lists.newArrayList("twitterapi",
-                    "#AAPSweep"));
+                    "#Futbol"));
 
             String consumerKey=TwitterSourceConstant.CONSUMER_KEY_KEY;
             String consumerSecret=TwitterSourceConstant.CONSUMER_SECRET_KEY;

@@ -19,6 +19,17 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 ``` sh
 > bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 10 --topic test_topic
 ```
+Lista topics
+
+bin/kafka-topics.sh --zookeeper localhost:2181 --list
+
+Producir mensajes
+
+bin/kafka-console-producer.sh --broker-list localhost:9095 --topic hadoop
+
+Consumir mensajes
+
+bin/kafka-console-consumer.sh --zookeeper localhost:2181 --from-beginning --topic hadoop
 
 ### package this example
 ``` sh
