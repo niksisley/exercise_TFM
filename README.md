@@ -42,11 +42,7 @@ it will package compiled classes and its dependencies into a jar.
 This example also contains two producers written in Java and in scala.
 you can run this for java:
 ``` sh
-java -cp kafka_example-0.1.0-SNAPSHOT.jar com.colobu.kafka.ProducerExample 10000 test_topic localhost:9092
-```
-or this for scala
-``` sh
-java -cp kafka_example-0.1.0-SNAPSHOT.jar com.colobu.kafka.ScalaProducerExample 10000 test_topic localhost:9092
+java -cp exercise-TFM-2.2.1-SNAPSHOT.jar com.colobu.kafka.TwitterKafkaProducer 10000 topic_master localhost:9092
 ```
 
 ### Run the Consumer
@@ -56,11 +52,8 @@ You can run this for java:
 java -cp kafka_example-0.1.0-SNAPSHOT.jar com.colobu.kafka.ConsumerExample localhost:2181 group1 test_topic 10 0
 ```
 
-or this for scala:
-``` sh
-java -cp kafka_example-0.1.0-SNAPSHOT.jar com.colobu.kafka.ScalaConsumerExample localhost:2181 group1 test_topic 10 0
-```
-Elasticsearch
+
+### Elasticsearch
 
 curl -XPUT 'http://localhost:9200/twitter/user/kimchy?pretty' -d '{ "name" : "Shay Banon" }'
 
